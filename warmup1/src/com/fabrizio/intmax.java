@@ -8,14 +8,14 @@ public class intmax
 //    intMax(3, 2, 1) → 3
 public int intMax(int a, int b, int c) {
     int max;
-    if (a > b) {
+    if(a > b){
         max = a;
     } else {
         max = b;
     }
-    if (c > max) {
+    if(c > max){
         max = c;
-    } else {
-        return max;
     }
-}
+    return max;
+
+}}
