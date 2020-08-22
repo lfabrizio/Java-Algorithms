@@ -10,11 +10,15 @@ public class icecream {
         // nested loop
         for (int i = 0; i < cost.length; i++) {
             //inner loop
-            for (j = i + 1; i < cost.length; j++) {
+            for (int j = i + 1; j < cost.length; j++) {
                 //if statement to determine if combo equals the $
                 if (cost[i] + cost[j] == money) {
-                    // place indexises in temp array
+                    // place indexes in temp array
+                    tempArray[0] = i+1;
+                     tempArray[1] = j+1;
+                    return tempArray;
                 }
             }
+
         }
     }}
