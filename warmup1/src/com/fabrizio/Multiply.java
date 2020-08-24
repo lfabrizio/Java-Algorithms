@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Multiply {
     public static void main(String[] args){
         // take input from console, system.in passed as a parameter
+        // make a new object of the scanner class
         Scanner in = new Scanner(System.in);
 
         System.out.print("Input first number: ");
         int num1 = in.nextInt();
-
+// parsed into an integer use nextInt();
         System.out.print("Input second number: ");
         int num2 = in.nextInt();
 
