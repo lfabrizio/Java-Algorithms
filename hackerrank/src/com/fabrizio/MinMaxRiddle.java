@@ -10,9 +10,10 @@ public class MinMaxRiddle {
         Object[] array = result.toArray(); // to array
         int arrLength = arr.length; //get array length
         // loop through to find max and min
+        // loop 
         for (int idx = 0, idx2 = 1; idx < arrLength; idx++, idx2++) {
             System.out.println(Math.min(arr[idx], arr[idx2]));
-
+        System.out.println("print here: ")
         }
     }
 }
