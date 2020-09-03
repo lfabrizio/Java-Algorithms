@@ -11,7 +11,7 @@ public class UpperFirstLetter {
 
         int i = 1;
         if(i == ' '){ // if statement to check if space white space
-
+            y[i +1] == y[i] -32;
         }
     }
 }
