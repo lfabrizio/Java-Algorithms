@@ -8,5 +8,14 @@ public class CountVCS {
         int vowels = 0;
         int consts = 0;
         int special = 0;
+
+        int i = 0;
+        while(i !=)
+        {
+            if(y[i] >= 'A' || y[i] <= 'Z')
+            {
+                
+            }
+        }
     }
 }
