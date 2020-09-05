@@ -12,10 +12,24 @@ public class CountVCS {
         int i = 0;
         while(i != size)
         {
-            if(y[i] >= 'A' || y[i] <= 'Z')
+            if(y[i] >= 'A' && y[i] <= 'Z')
             {
-                ++consts;
+                if(y[i]== 'A' || y[i]== 'E' || y[i]== 'I' || y[i] == 'O' || y[i] == 'U')
+                {
+                ++vowels;
+                }
+                else{
+                    ++consts;
+                }
             }
+            else{
+                ++special;
+            }
+                ++i;
         }
+        System.out.println(y);
+        System.out.print("vowle count" + vowels);
+        System.out.println("constants count" +consts);
+        System.out.println("Specials"+special);
     }
 }
