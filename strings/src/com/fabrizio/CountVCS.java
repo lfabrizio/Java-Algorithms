@@ -10,11 +10,11 @@ public class CountVCS {
         int special = 0;
 
         int i = 0;
-        while(i !=)
+        while(i != size)
         {
             if(y[i] >= 'A' || y[i] <= 'Z')
             {
-                
+                ++consts;
             }
         }
     }
