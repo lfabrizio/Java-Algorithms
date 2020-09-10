@@ -1,7 +1,7 @@
 package com.fabrizio;
 
 public class ReverseString {
-// reverse a word 
+// reverse a word
     public static void main(String[] args)
     {
         String r = reverse("dog");
