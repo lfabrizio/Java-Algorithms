@@ -15,9 +15,11 @@ public class CompareTwo {
 
         System.out.print( "Input second integer: " ); // prompt
         numberTwo = input.nextInt(); // read second number from user
-        
+
         if(numberOne == numberOne){
-            System.out.println("equal numbers")
+            System.out.println("equal numbers");
+        } else {
+        System.out.println("not equal");
         }
     }
 }
