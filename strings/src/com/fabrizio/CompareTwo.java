@@ -19,7 +19,8 @@ public class CompareTwo {
         if(numberOne == numberOne){
             System.out.println("equal numbers");
         } else {
+            if(numberOne >= numberTwo)
         System.out.println("not equal");
-        }
+        } 
     }
 }
