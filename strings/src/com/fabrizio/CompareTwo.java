@@ -21,6 +21,8 @@ public class CompareTwo {
         } else {
             if(numberOne >= numberTwo)
         System.out.println("not equal");
-        } 
+        }
+        System.out.println("match");
+        }
     }
 }
