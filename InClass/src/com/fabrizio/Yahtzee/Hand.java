@@ -15,7 +15,7 @@ public class Hand {
     public void rollAll() {
         for (int i = 0; i < 5; i++) {
             Die die = new Die();
-            die.roll();//error
+            die.roll(); //error
             dice.add(die);
         }
     }
