@@ -12,7 +12,7 @@ public class Console {
     public void play() {
         System.out.println("Player 1, would you like to roll?"); //ask
         String user = in.nextLine(); // response
-        if(user == "No" || user == "N"){
+        if(user.matches("no") || user.matches("n")){
             break;
         } else {
     System.out.println("Which die would you like to re-roll? ");
