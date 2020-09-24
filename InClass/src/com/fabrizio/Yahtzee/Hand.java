@@ -1,24 +1,22 @@
 package com.fabrizio.Yahtzee;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Hand {
-    private List<Die> dice;
+    private ArrayList<Die> dice = new ArrayList<>();
+    private int diceSize;
 
-    public Hand(){
-        dice = new ArrayList<Die>();
-        for(int count = 0; count < 5;count++){
-        var die = new Die();
-        dice.add(die);
+
+    public Hand(int diceSize) {
+        this.diceSize = diceSize;
+    }
+
+    public void rollAll() {
+        for (int i = 0; i < 5; i++) {
+            Die die = new Die();
+            die.roll();//error
+            dice.add(die);
         }
-
-        public void rollAll(){
-            for(die : dice)
-            {
-                
-            }
-        }
-
     }
 }
