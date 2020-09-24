@@ -15,6 +15,9 @@ public class Hand {
 
         public void rollAll(){
             for(die : dice)
+            {
+                
+            }
         }
 
     }
