@@ -1,10 +1,11 @@
 package com.fabrizio.Yahtzee;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Hand {
-    private ArrayList<Die> dice = new ArrayList<>();
+    private List<Die> dice;
     private int diceSize;
 
 
@@ -15,7 +16,8 @@ public class Hand {
     public void rollAll() {
         for (int i = 0; i < 5; i++) {
             Die die = new Die();
-            die.roll(); //error
+            die.getValue();
+            die.roll();
             dice.add(die);
         }
     }

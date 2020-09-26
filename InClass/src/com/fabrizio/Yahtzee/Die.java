@@ -21,7 +21,7 @@ public class Die {
     value = rand.nextInt(sides)+1;
     }
 
-    public int getValue() {
+    public int getValue() {// get value
         return value;
     }
 }
