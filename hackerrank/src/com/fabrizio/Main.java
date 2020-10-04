@@ -1,9 +1,9 @@
 package com.fabrizio;
 
 public class Main {
-// attempt sherlock and valid string
-static String isValid(String s) {
-
+// main
+    public static void main(String [] args){
+        // main
 
 }
 }
