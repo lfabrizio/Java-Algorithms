@@ -2,30 +2,34 @@ package com.fabrizio;
 
 import java.util.List;
 import java.util.Random;
-//v1.0 I have a die
-// v1.1 that die can be rolled to have a random value
-public class Die {
-    // get/create the die
-    private int diceSides = 6; // dice sides
-    private int diceValue = 0; //to store value of dice rolled
+import java.util.Scanner;
 
+public class Die {
+
+    private int diceSides = 6;
+    private int diceValue;
+
+    //constructor
     public Die() {
         diceValue = 1;
     }
-//overloading
-    public Die(int sides){
-        diceValue = 1;
-        this.diceValue = sides;
+
+    // A Dice Value Method
+    public void Value(Random random) {
+        diceValue = random.nextInt(diceSides) + 1;
     }
 
-    public void roll(Random rand){
-         diceValue = rand.nextInt(diceSides)+ 1;
-    }
-
-
-    public int getValue(){
-        System.out.println(diceValue);
+    // Get Dice value after roll
+    public int getDiceValue() {
+     //   System.out.println(diceValue);
         return diceValue;
     }
-
+    // Probably NOT needed
+    //public void setValue(int diceValue){
+    // this.diceValue=diceValue;
+    //}
 }
+
+
+
+

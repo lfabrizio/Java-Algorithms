@@ -1,22 +1,55 @@
 package com.fabrizio;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Console {
     // console class
-    Scanner in = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
+    public int rounds = 1;
+   static public void welcome(String gameChoice) {
 
-    public void userPrompt(){
-        for(int i = 0; i < 3; i++){
-            System.out.println("roll again?");
-            String response = in.nextLine();
-            if(response.matches("no") || response.matches("n")){
-                break;
-            }
-            // lets prompt the reroll for users choice
-            System.out.println("which exact die would you like to roll?");
-            String reRoll = in.nextLine();
-            // reRoll
+       System.out.print("Welcome to " + gameChoice);
+       System.out.println("\n");
+   }
+
+
+    static public void showRoll(List<Die> dice){
+        System.out.print("*****Player's Roll*****");
+        System.out.println("\n");
+
+        for(var die : dice){
+            System.out.print(die.getDiceValue() + " ");
         }
+        System.out.println("\n**********************\n");
     }
+
+
+
+
+    static public List<Integer> getChoices() {
+        System.out.print("Which Die Would You Like to Roll?");
+        String input = scanner.nextLine();
+            //need to split spaces
+        String[] inputArray = input.split("");
+       List <Integer> choices = new ArrayList<Integer>();
+                for (String number : inputArray){
+                    choices.add(Integer.parseInt(number)- 1);
+                }
+                return choices;
+    }
+
+    // add in rounds
+
+
+
+
+//            // get yahtzee
+//           public boolean confirmYahtzee(){
+//              int yahtzee = dice.get(0).getValue();
+//             for(int read = 0; read < dice.size(); read++){
+//
+//   }
+
 }

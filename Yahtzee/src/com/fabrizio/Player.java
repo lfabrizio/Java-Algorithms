@@ -3,36 +3,54 @@ package com.fabrizio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Player {
+
         private List<Die> dice;
 
-        public Player(){
-            // create list , then loop through 5 dice and add all
+        // create hand and pass in size-- loop though the size, count and add to List
+        public Player(int size){
             dice = new ArrayList<Die>();
-            for (int count = 0; count < 5; count++){
-                var die = new Die();
-                dice.add(die);
+            for(int count = 0; count < size; count++){
+                dice.add(new Die());
             }
         }
-        // roll the whole players hand
-        public void roll(Random rand){
+
+
+        // moved roll method to Player class - may make more sense
+        public void Roll(Random random){
             for(var die : dice){
-                die.roll(rand);
+                die.Value(random);
             }
         }
-        // overloading , this will roll at that index if number is submitted. choice will be the index
-        public void roll(Random rand, int choice){
-        dice.get(choice).roll(rand);
-        }
-        // lets display the hand
-        public void displayHand(){
-        //display
+
+        // overloading of method to receive specific die
+        public void Roll(Random random, int specificDice){
+            dice.get(specificDice).Value(random);
         }
 
-        public void reRoll(Random rand){
-            // prompt to reroll
+        public void Roll(Random random, List<Integer> choices){
+            for(int choice : choices){
+                Roll(random, choice);
+            }
+
         }
 
 
-    }
+//        public int findDie(Die checkDie){
+//            return this.dice.get(dice.indexOf(checkDie)).getValue();
+//        }
+               //learned gets sets not always necessary
+               //public void setDice(List<Die> dice) {
+               //  this.dice = dice;
+
+      public List<Die> getDice(){
+           return dice;
+          }
+
+
+
+}
+
+
