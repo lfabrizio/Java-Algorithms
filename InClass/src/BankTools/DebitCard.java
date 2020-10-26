@@ -13,6 +13,7 @@ public class DebitCard {
     private String cardOwner;
     private String cardNum;
     private List<SavingsAccount> atmAccounts;
+    private List<CheckingAccount> checkingAccounts;
 
     public DebitCard(String cardNum, String pin, String cvv, String cardOwner, CheckingAccount primary, List atmAccounts) {
         this.cardNum = cardNum;

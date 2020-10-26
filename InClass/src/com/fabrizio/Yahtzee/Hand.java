@@ -17,7 +17,7 @@ public class Hand {
         for (int i = 0; i < 5; i++) {
             Die die = new Die();
             die.getValue();
-            die.roll();
+           // die.roll();
             dice.add(die);
         }
     }

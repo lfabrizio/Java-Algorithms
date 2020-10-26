@@ -10,7 +10,7 @@ public class YahtzeeConsole extends Console{
         // empty constructor
 
     }
-
+        // code is working. Re-roll corrected
     public void playGame() {
         Console.welcome("Yahtzee");
         Random random = new Random();
@@ -21,6 +21,8 @@ public class YahtzeeConsole extends Console{
        play.Roll(random, Console.getChoices());
         Console.showRoll(play.getDice());
     }
+
+
 
 
 }

@@ -1,5 +1,7 @@
 package com.fabrizio;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +9,7 @@ import java.util.Scanner;
 public class Console {
     // console class
     static Scanner scanner = new Scanner(System.in);
-    public int rounds = 1;
+
    static public void welcome(String gameChoice) {
 
        System.out.print("Welcome to " + gameChoice);
@@ -45,11 +47,8 @@ public class Console {
 
 
 
-//            // get yahtzee
-//           public boolean confirmYahtzee(){
-//              int yahtzee = dice.get(0).getValue();
-//             for(int read = 0; read < dice.size(); read++){
-//
-//   }
+
+
+
 
 }
