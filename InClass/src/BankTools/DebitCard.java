@@ -1,5 +1,6 @@
 package BankTools;
 
+import BankAccount.Account;
 import BankAccount.CheckingAccount;
 import BankAccount.SavingsAccount;
 
@@ -12,16 +13,15 @@ public class DebitCard {
     private String cvv;
     private String cardOwner;
     private String cardNum;
-    private List<SavingsAccount> atmAccounts;
-    private List<CheckingAccount> checkingAccounts;
+    private List<Account> atmAccounts;
 
-    public DebitCard(String cardNum, String pin, String cvv, String cardOwner, CheckingAccount primary, List atmAccounts) {
+    public DebitCard(String cardNum, String pin, String cvv, String cardOwner, CheckingAccount primary) {
         this.cardNum = cardNum;
         this.pin = pin;
         this.cvv = cvv;
         this.cardOwner = cardOwner;
         this.primary = primary;
-        this.atmAccounts = atmAccounts;
+        atmAccounts = new ArrayList<>();
     }
 
     public Boolean charge(int amt, String pin) {
@@ -31,6 +31,15 @@ public class DebitCard {
         }
         return false;
     }
+
+    public void addAccount(Account account) {
+        atmAccounts.add(account);
+    }
+
+    public String toString() {
+        return "cardNum: " + cardNum;
+    }
+
 }
 
 // create a Client class
@@ -38,3 +47,8 @@ public class DebitCard {
 // listArray of CheckingAccounts
 // listArray of SavingsAccounts
 // a method to add an account to the client (try to use overloading) addAccount()
+
+// create a Bank class
+// 2 properties of your own.
+// listArray of Clients
+// method to add a client
